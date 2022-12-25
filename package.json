@@ -6,7 +6,9 @@
 	"scripts": {
 		"dev": "webpack serve",
 		"webpackBuild": "webpack",
-		"previewDist": "node previewDist"
+		"previewDist": "node previewDist",
+		"webpackDev": "webpack serve",
+		"build": "npm-run-all -s generate webpackBuild"
 	},
 	"keywords": [],
 	"author": "",
