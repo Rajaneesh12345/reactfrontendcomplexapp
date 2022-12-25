@@ -5,10 +5,9 @@
 	"main": "index.js",
 	"scripts": {
 		"dev": "webpack serve",
-		"webpackBuild": "webpack",
+		"build": "webpack",
 		"previewDist": "node previewDist",
-		"webpackDev": "webpack serve",
-		"build": "npm-run-all -s generate webpackBuild"
+		"webpackDev": "webpack serve"
 	},
 	"keywords": [],
 	"author": "",
