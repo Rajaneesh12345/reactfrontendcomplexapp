@@ -215,7 +215,11 @@ const HomeGuest = props => {
 					appDispatch({ type: 'login', data: response.data })
 					appDispatch({
 						type: 'flashMessage',
-						value: 'Congrats! You have successfully created an account.'
+						value: {
+							message:
+								'Congrats! You have successfully created an account.',
+							color: 'success'
+						}
 					})
 				}
 				fetchResults()

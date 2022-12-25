@@ -19,14 +19,20 @@ function ComponentName(props) {
 	async function handleSubmit(e) {
 		e.preventDefault()
 		try {
-			const response = await Axios.post('localhost:8080/create-post', {
-				title,
-				body,
-				token: appState.user.token
-			})
+			const response = await Axios.post(
+				'https://backendapi-n3y9.onrender.com/create-post',
+				{
+					title,
+					body,
+					token: appState.user.token
+				}
+			)
 			appDispatch({
 				type: 'flashMessage',
-				value: 'Congrats, you successfully created a post.'
+				value: {
+					message: 'Congrats, you successfully created a post.',
+					color: 'success'
+				}
 			})
 			// addFlashMessage('Congrats, you successfully created a post.')
 			navigate('/post/' + response.data)

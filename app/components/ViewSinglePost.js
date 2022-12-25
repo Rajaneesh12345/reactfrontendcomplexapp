@@ -81,7 +81,10 @@ function ViewSinglePost() {
 				if (response.data == 'Success') {
 					appDispatch({
 						type: 'flashMessage',
-						value: 'Post was successfully deleted.'
+						value: {
+							message: 'Post was successfully deleted.',
+							color: 'success'
+						}
 					})
 					navigate(`/profile/${appState.user.username}`)
 				}

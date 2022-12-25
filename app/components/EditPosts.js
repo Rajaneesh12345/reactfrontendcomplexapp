@@ -94,7 +94,11 @@ function EditPost() {
 					if (appState.user.username !== response.data.author.username) {
 						appDispatch({
 							type: 'flashMessage',
-							value: 'You do not have permission to edit that post.'
+							value: {
+								message:
+									'You do not have permission to edit that post.',
+								color: 'danger'
+							}
 						})
 						navigate('/')
 					}
@@ -131,7 +135,10 @@ function EditPost() {
 					dispatch({ type: 'saveRequestFinished', value: response.data })
 					appDispatch({
 						type: 'flashMessage',
-						value: 'Post was successfully updated.'
+						value: {
+							message: 'Post was successfully updated.',
+							color: 'success'
+						}
 					})
 					navigate(`/post/${state.id}`)
 				} catch (e) {

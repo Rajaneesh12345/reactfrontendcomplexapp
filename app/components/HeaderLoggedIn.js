@@ -18,7 +18,10 @@ function HeaderLoggedIn(props) {
 		appDispatch({ type: 'logout' })
 		appDispatch({
 			type: 'flashMessage',
-			value: 'You have successfully logged out.'
+			value: {
+				message: 'You have successfully logged out.',
+				color: 'success'
+			}
 		})
 	}
 	return (

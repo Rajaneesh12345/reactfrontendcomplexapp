@@ -111,7 +111,11 @@ function Main() {
 						dispatch({ type: 'logout' })
 						dispatch({
 							type: 'flashMessage',
-							value: 'Your session has expired. Please log in again.'
+							value: {
+								message:
+									'Your session has expired. Please log in again.',
+								color: 'success'
+							}
 						})
 					}
 				}

@@ -1,5 +1,4 @@
 const React = require('react')
-const { useEffect } = require('react')
 
 function FlashMessages(props) {
 	return (
@@ -8,9 +7,12 @@ function FlashMessages(props) {
 				return (
 					<div
 						key={index}
-						className="alert alert-success text-center floating-alert shadow-sm"
+						className={
+							'alert text-center floating-alert shadow-sm ' +
+							('alert-' + `${msg.color}`)
+						}
 					>
-						{msg}
+						{msg.message}
 					</div>
 				)
 			})}
