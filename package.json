@@ -6,8 +6,7 @@
 	"scripts": {
 		"dev": "webpack serve",
 		"build": "webpack",
-		"previewDist": "node previewDist",
-		"webpackDev": "webpack serve"
+		"previewDist": "node previewDist"
 	},
 	"keywords": [],
 	"author": "",
